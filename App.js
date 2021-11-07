@@ -4,7 +4,7 @@ import { StyleSheet, Text, SafeAreaView, Button } from 'react-native';
 
 export default function App() {
   const handleTextPress = () => console.log('Text output within function used.');
-  const handleButtonPress = () => alert('Alert message');
+  const handleButtonPress = () => alert('This is simple Alert just with message.');
 
   return (
     <SafeAreaView style={styles.container}>
