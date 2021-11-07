@@ -8,7 +8,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.text} onPress={handleTextPress}>Hello World!</Text>
-      <Button title={'Press on me'} onPress={handleTextPress} />
+      <Button title={'Press on me'} onPress={handleTextPress} color="green" />
 
       <StatusBar style="auto" />
     </SafeAreaView>
