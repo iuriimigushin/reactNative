@@ -9,6 +9,7 @@ export default function App() {
     { text: "Yes", onPres: () => console.log('Complex alert used. Yes button pressed.') },
     { text: "No", onPres: () => console.log('Complex alert used. No button pressed.') }
   ]);
+  const handleButtonPress3 = () => Alert.prompt("Password checker", "Enter your password please", text => console.log(text))
 
   return (
     <SafeAreaView style={styles.container}>
@@ -20,6 +21,7 @@ export default function App() {
       <Button title={'Press on me'} onPress={handleTextPress} color="green" />
       <Button title={'Press on me'} onPress={handleButtonPress} color="orange" />
       <Button title={'Press on me'} onPress={handleButtonPress2} color="red" />
+      <Button title={'Check password'} onPress={handleButtonPress3} color="blue" />
 
       <StatusBar style="auto" />
     </SafeAreaView>
