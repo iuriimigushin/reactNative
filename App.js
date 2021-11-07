@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, Button } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Button, Alert } from 'react-native';
 
 export default function App() {
   const handleTextPress = () => console.log('Text output within function used.');
   const handleButtonPress = () => alert('This is simple Alert just with message.');
+  const handleButtonPress2 = () => Alert.alert("Alert title", "Message of complex alert entity.", [
+    { text: "Yes", onPres: () => console.log('Complex alert used. Yes button pressed.') },
+    { text: "No", onPres: () => console.log('Complex alert used. No button pressed.') }
+  ]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -15,6 +19,7 @@ export default function App() {
       <Text style={styles.text} onPress={handleTextPress}>Text output within function.</Text>
       <Button title={'Press on me'} onPress={handleTextPress} color="green" />
       <Button title={'Press on me'} onPress={handleButtonPress} color="orange" />
+      <Button title={'Press on me'} onPress={handleButtonPress2} color="red" />
 
       <StatusBar style="auto" />
     </SafeAreaView>
