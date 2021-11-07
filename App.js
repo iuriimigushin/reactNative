@@ -4,6 +4,7 @@ import { StyleSheet, Text, SafeAreaView, Button } from 'react-native';
 
 export default function App() {
   const handleTextPress = () => console.log('Text output within function used.');
+  const handleButtonPress = () => alert('Alert message');
 
   return (
     <SafeAreaView style={styles.container}>
@@ -13,6 +14,7 @@ export default function App() {
       <Text style={styles.text} onPress={() => console.log('Text output within attribute used.')}>Text output withing attribute.</Text>
       <Text style={styles.text} onPress={handleTextPress}>Text output within function.</Text>
       <Button title={'Press on me'} onPress={handleTextPress} color="green" />
+      <Button title={'Press on me'} onPress={handleButtonPress} color="orange" />
 
       <StatusBar style="auto" />
     </SafeAreaView>
